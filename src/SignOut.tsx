@@ -1,9 +1,8 @@
 import React from 'react';
 import { auth } from './firebaseConfig';
-import './SignOut.css';
+import { Button, Box } from '@mui/material';
 
-
-const SignOut = () =>
+const SignOut: React.FC = () =>
 {
     const handleSignOut = async () =>
     {
@@ -16,7 +15,17 @@ const SignOut = () =>
         }
     };
 
-    return auth.currentUser ? <button onClick={handleSignOut}>Sign Out</button> : null;
+    return auth.currentUser ? (
+        <Box display="flex" justifyContent="center" mt={2}>
+            <Button
+                variant="outlined"
+                color="secondary"
+                onClick={handleSignOut}
+            >
+                Sign Out
+            </Button>
+        </Box>
+    ) : null;
 };
 
 export default SignOut;

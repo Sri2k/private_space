@@ -1,10 +1,9 @@
 import React from 'react';
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from './firebaseConfig';
-import './SignIn.css';
+import { Button, Box } from '@mui/material';
 
-
-const SignIn = () =>
+const SignIn: React.FC = () =>
 {
     const signInWithGoogle = () =>
     {
@@ -15,7 +14,17 @@ const SignIn = () =>
         });
     };
 
-    return <button onClick={signInWithGoogle}>Sign In with Google</button>;
+    return (
+        <Box display="flex" justifyContent="center" mt={4}>
+            <Button
+                variant="contained"
+                color="primary"
+                onClick={signInWithGoogle}
+            >
+                Sign In with Google
+            </Button>
+        </Box>
+    );
 };
 
 export default SignIn;
