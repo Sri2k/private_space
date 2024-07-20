@@ -4,7 +4,7 @@ import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
     apiKey: "AIzaSyC9uuRVZfC5YwPgRSq_9YDBtYtwGMZC-G8",
-    authDomain: "private-space-6fd4f.firebaseapp.com",
+    authDomain: "sri2k.github.io",
     projectId: "private-space-6fd4f",
     storageBucket: "private-space-6fd4f.appspot.com",
     messagingSenderId: "499338546858",
