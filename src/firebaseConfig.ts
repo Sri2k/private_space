@@ -3,13 +3,13 @@ import { enableIndexedDbPersistence, getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC9uuRVZfC5YwPgRSq_9YDBtYtwGMZC-G8",
-    authDomain: "private-space-6fd4f.firebaseapp.com",
-    projectId: "private-space-6fd4f",
-    storageBucket: "private-space-6fd4f.appspot.com",
-    messagingSenderId: "499338546858",
-    appId: "1:499338546858:web:5beec7b7ae7574d4824ad3",
-    measurementId: "G-YGYRNX3FEE"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
